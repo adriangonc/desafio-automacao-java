@@ -106,21 +106,17 @@ public class DesafioDosNicks {
 	/* Salva os nicks com CPF gerado no arquivo */
 	private static void salvarArquivoTxt(String nickComCPF) {
 		try {
-			File file = new ClassPathResource("nicksComCPF.txt").getFile();
+            //File file = new ClassPathResource("nickscomcpf.txt").getFile();
+			File file = new File("nickscomcpf.txt");
+            if (!file.exists()) {
+                file.createNewFile();
+            }
 
-			if (!file.exists()) {
-				file.createNewFile();
-				System.out.println("Arquivo criado com sucesso");
-			} else {
-				System.out.println("Arquivo ja existe");
-			}
-
-			PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file, true)));
-
-			pw.write(nickComCPF);
-			pw.write("\n");
-
-			pw.close();
+            FileWriter fw = new FileWriter(file, true);
+            //BufferedWriter bw = new BufferedWriter(fw);
+            fw.write(nickComCPF + "\n");
+            //fw.newLine();
+            fw.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();

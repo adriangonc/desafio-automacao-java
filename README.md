@@ -14,4 +14,4 @@ Será feita uma iteração nos nicks, adicionando um CPF gerado pela página par
 Foi configurado um delay de 1 segundo para geração dos CPF's para dar tempo para que a geração do CPF seja concluída.
 
 # Arquivo TXT
-Serão granvados os nicks com CPF no arquivo 'nicksComCPF.txt' que está no diretório 'resources' da aplicação. 
+Serão granvados os nicks com CPF no arquivo 'nickscomcpf.txt' que está no diretório raiz da aplicação. 
